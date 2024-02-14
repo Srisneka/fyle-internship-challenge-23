@@ -1,0 +1,38 @@
+<div class="content">
+  <span>{{ title }} app is running!</span>
+</div>
+<div class="grid">
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchUsername" placeholder="Enter GitHub username" class="border p-2 rounded">
+    <button (click)="search()" class="btn">Search</button>
+  </div>
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="repositories.length > 0" class="profile-container">
+    <div class="profile-info">
+      <img [src]="user.avatar_url" alt="Profile Image"> 
+      <h2>{{ user.login }}</h2>
+    </div>
+
+    <div class="repositories">
+      <h2 class="title">Popular repositories</h2>
+      <div class="repository-row" *ngFor="let row of repositoryRows">
+        <div class="repository-column" *ngFor="let repo of row">
+          <h3>{{ repo.name }}</h3>
+          <p>{{ repo.description }}</p>
+          <button>{{repo.language}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <select [(ngModel)]="pageSize" (change)="changePageSize()" class="border p-2 rounded">
+        <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+      </select>
+      <button (click)="previousPage()" [disabled]="currentPage === 1" class="btn">Previous</button>
+      Page {{ currentPage }} of {{ totalPages }}
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="btn">Next</button>
+    </div>
+  </div>
+</div>

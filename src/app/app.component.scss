@@ -1,0 +1,120 @@
+.grid {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+
+  .content{
+    display: none;
+  }
+  
+  .search-container {
+    margin-bottom: 1rem;
+  }
+  .search-container input {
+    margin-right: 0.5rem;
+  }
+  .search-container button{
+    background-color: #4a90e2; 
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 0.4rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  .loading, .error {
+    margin-top: 1rem;
+  }
+  
+  .profile-container {
+    width: 80%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem; 
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-info img {
+    width: 80px; 
+    border-radius: 60%; 
+    margin-right: 1rem;
+  }
+  .repositories {
+    width: 100%; 
+    padding: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  }
+
+  .repositories .title{
+    margin-left: 100px;
+  }
+  
+  .repository-row {
+    display: flex;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem; 
+    gap: 80px;
+  }
+  
+  .repository-column {
+    width: 35%; 
+    padding: 0 0.8rem; 
+    box-sizing: border-box; 
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-left: 80px;
+  }
+  .repository-column h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .repository-column p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .repository-column button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    font-size: 8px;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  
+  .pagination {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .pagination select, .pagination button {
+    margin: 0 0.5rem;
+  }
+  .pagination button{
+    background-color: #4a90e2; 
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 0.4rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+ }
+  
